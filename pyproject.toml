@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "dbt-studies"
+version = "0.1.0"
+description = ""
+authors = ["Marlon Rozindo <marlon.saura@owshq.com>"]
+readme = "README.md"
+packages = [{include = "dbt_studies"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[tool.poetry.group.airflow.dependencies]
+astronomer-cosmos = "^0.7.4"
+
+
+[tool.poetry.group.dev.dependencies]
+apache-airflow = "^2.6.2"
+
+
+[tool.poetry.group.dbt.dependencies]
+dbt-core = "^1.5.2"
+sqlfluff = "^2.1.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
